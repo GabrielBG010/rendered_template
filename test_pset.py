@@ -16,12 +16,6 @@ class FakeFileFailure(IOError):
     pass
 
 
-class HashTests(TestCase):
-    def test_basic(self):
-        self.assertEqual(hash_str("world!", salt="hello, ")
-                         .hex()[:6], "68e656")
-
-
 class AtomicWriteTests(TestCase):
     def test_atomic_write(self):
         """Ensure file exists after being written successfully"""
